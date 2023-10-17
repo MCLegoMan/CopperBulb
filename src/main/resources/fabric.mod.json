@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "copperbulb",
+	"version": "${version}",
+	"name": "CopperBulb",
+	"description": "Recreation of the Copper Bulb showcased in Minecraft Live 2023.",
+	"authors": [
+		"MCLegoMan"
+	],
+	"contact": {
+		"homepage": "https://github.com/MCLegoMan"
+	},
+	"license": "LGPL-3.0-or-later",
+	"icon": "assets/copperbulb/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mclegoman.copperbulb.common.CopperBulb"
+		]
+	},
+	"depends": {
+		"fabric-api": "*"
+	}
+}

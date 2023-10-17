@@ -1,0 +1,11 @@
+{
+	"block.copperbulb.copper_bulb": "Copper Bulb",
+	"block.copperbulb.exposed_copper_bulb": "Exposed Copper Bulb",
+	"block.copperbulb.weathered_copper_bulb": "Weathered Copper Bulb",
+	"block.copperbulb.oxidized_copper_bulb": "Oxidized Copper Bulb",
+
+	"block.copperbulb.waxed_copper_bulb": "Waxed Copper Bulb",
+	"block.copperbulb.waxed_exposed_copper_bulb": "Waxed Exposed Copper Bulb",
+	"block.copperbulb.waxed_weathered_copper_bulb": "Waxed Weathered Copper Bulb",
+	"block.copperbulb.waxed_oxidized_copper_bulb": "Waxed Copper Bulb"
+}
