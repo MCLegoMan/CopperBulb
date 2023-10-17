@@ -18,6 +18,9 @@
 			"com.mclegoman.copperbulb.common.CopperBulb"
 		]
 	},
+	"mixins": [
+		"copperbulb.mixins.json"
+	],
 	"depends": {
 		"fabric-api": "*"
 	}

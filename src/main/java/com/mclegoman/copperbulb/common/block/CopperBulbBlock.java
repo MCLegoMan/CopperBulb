@@ -32,7 +32,7 @@ public class CopperBulbBlock extends Block {
 
 	@Override
 	public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
-		return 15;
+		return world.getLuminance(pos);
 	}
 
 	@Override
