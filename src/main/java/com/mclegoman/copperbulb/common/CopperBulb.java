@@ -13,24 +13,25 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class CopperBulb implements ModInitializer {
-	public static Block COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(15))));
+	public static Block COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(15)).mapColor(Blocks.COPPER_BLOCK.getDefaultMapColor()).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool().solidBlock(Blocks::never)));
 	public static Item COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "copper_bulb"), new BlockItem(COPPER_BULB, new FabricItemSettings()));
-	public static Block EXPOSED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "exposed_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(11))));
+	public static Block EXPOSED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "exposed_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(12)).mapColor(Blocks.COPPER_BLOCK.getDefaultMapColor()).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool().solidBlock(Blocks::never)));
 	public static Item EXPOSED_COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "exposed_copper_bulb"), new BlockItem(EXPOSED_COPPER_BULB, new FabricItemSettings()));
-	public static Block WEATHERED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "weathered_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(7))));
+	public static Block WEATHERED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "weathered_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(8)).mapColor(Blocks.COPPER_BLOCK.getDefaultMapColor()).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool().solidBlock(Blocks::never)));
 	public static Item WEATHERED_COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "weathered_copper_bulb"), new BlockItem(WEATHERED_COPPER_BULB, new FabricItemSettings()));
-	public static Block OXIDIZED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "oxidized_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(3))));
+	public static Block OXIDIZED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "oxidized_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(4)).mapColor(Blocks.COPPER_BLOCK.getDefaultMapColor()).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool().solidBlock(Blocks::never)));
 	public static Item OXIDIZED_COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "oxidized_copper_bulb"), new BlockItem(OXIDIZED_COPPER_BULB, new FabricItemSettings()));
-	public static Block WAXED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(15))));
+	public static Block WAXED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.copy(COPPER_BULB)));
 	public static Item WAXED_COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "waxed_copper_bulb"), new BlockItem(COPPER_BULB, new FabricItemSettings()));
-	public static Block WAXED_EXPOSED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_exposed_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(11))));
+	public static Block WAXED_EXPOSED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_exposed_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.copy(EXPOSED_COPPER_BULB)));
 	public static Item WAXED_EXPOSED_COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "waxed_exposed_copper_bulb"), new BlockItem(EXPOSED_COPPER_BULB, new FabricItemSettings()));
-	public static Block WAXED_WEATHERED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_weathered_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(7))));
+	public static Block WAXED_WEATHERED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_weathered_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.copy(WEATHERED_COPPER_BULB)));
 	public static Item WAXED_WEATHERED_COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "waxed_weathered_copper_bulb"), new BlockItem(WEATHERED_COPPER_BULB, new FabricItemSettings()));
-	public static Block WAXED_OXIDIZED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_oxidized_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.create().luminance(Blocks.createLightLevelFromLitBlockState(3))));
+	public static Block WAXED_OXIDIZED_COPPER_BULB = Registry.register(Registries.BLOCK, new Identifier("copperbulb", "waxed_oxidized_copper_bulb"), new CopperBulbBlock(FabricBlockSettings.copy(OXIDIZED_COPPER_BULB)));
 	public static Item WAXED_OXIDIZED_COPPER_BULB_ITEM = Registry.register(Registries.ITEM, new Identifier("copperbulb", "waxed_oxidized_copper_bulb"), new BlockItem(OXIDIZED_COPPER_BULB, new FabricItemSettings()));
 	@Override
 	public void onInitialize() {
